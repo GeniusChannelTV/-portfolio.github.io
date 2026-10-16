@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0a0a0b" name="theme-color"/>
+<meta content="Руслан Емельянов — дизайнер инфографики для маркетплейсов. Более 3 лет опыта." name="description"/>
+<title>Руслан Емельянов — Дизайнер инфографики</title>
+<style>
+:root{--black:#0a0a0b;--white:#f8f8f7;--muted:#a6a6a8;--line:rgba(255,255,255,.17);--red:#e51b35}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--white);color:var(--black);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}
+.nav{position:absolute;z-index:5;top:0;left:0;width:100%;padding:22px 4vw;display:flex;justify-content:space-between;align-items:center;color:#fff}
+.brand{font-weight:800;letter-spacing:-.04em;font-size:16px;background:#fff;color:#080808;padding:7px 10px}
+.navlinks{display:flex;gap:28px;background:#19191b;padding:18px 24px;font-size:11px;text-transform:uppercase;letter-spacing:.04em}.navlinks a:hover,.contact-link:hover{opacity:.65}.nav-telegram{font-size:24px}
+.hero{min-height:760px;background:var(--black);color:#fff;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(320px,.9fr);padding:135px 0 0 4vw}
+.hero-copy{padding:12px 3vw 0 0;display:flex;flex-direction:column;justify-content:space-between}
+h1{margin:0;max-width:850px;font-size:clamp(58px,8.2vw,132px);line-height:.91;letter-spacing:-.085em;font-weight:500}
+.hero-bottom{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;background:#fff;color:#111;margin:55px 0 0 -4vw;padding:27px 3vw 30px 4vw;align-items:start}
+.eyebrow{font-size:11px;line-height:1.55;text-transform:uppercase;letter-spacing:.07em}.intro{max-width:440px;font-size:16px;line-height:1.5;margin:0 0 20px}
+.button{display:inline-flex;align-items:center;gap:18px;background:#111;color:#fff;padding:17px 22px;font-size:11px;text-transform:uppercase;letter-spacing:.04em;transition:.2s}.button:hover{transform:translateY(-2px);background:var(--red)}
+.hero-visual{min-height:600px;background:linear-gradient(145deg,#a90021,#e51b35 62%,#8e001c);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:30px}
+.portrait-placeholder{text-align:center;color:white}.portrait-placeholder strong{display:block;font-size:clamp(35px,5vw,72px);line-height:.95;letter-spacing:-.07em}.portrait-placeholder span{display:block;margin-top:18px;font-size:11px;text-transform:uppercase;letter-spacing:.13em;line-height:1.7;opacity:.85}
+section{padding:100px 4vw}.section-top{display:grid;grid-template-columns:1fr 2fr;gap:25px;align-items:start;margin-bottom:65px}.section-index{font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+h2{margin:0;font-size:clamp(38px,5.3vw,78px);font-weight:500;letter-spacing:-.07em;line-height:1.02}
+.services,.about{background:#f0efef}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #c9c8c8}
+.service{padding:24px 28px 22px 0;min-height:190px}.service+.service{border-left:1px solid #c9c8c8;padding-left:28px}.service-num{font-size:11px;color:#777;margin-bottom:22px}
+h3{margin:0 0 14px;font-size:24px;font-weight:500;letter-spacing:-.045em}.service p{max-width:330px;font-size:15px;line-height:1.55;color:#4d4d4f;margin:0}
+.work{background:#fff}.work-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:40px}.work-head h2{max-width:600px}.work-note{font-size:11px;color:#777;text-transform:uppercase}
+.project{border-top:1px solid #c9c8c8;padding:24px 0 55px}.project-meta{display:flex;justify-content:space-between;gap:20px;margin-bottom:25px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#666}
+.project h3{font-size:clamp(28px,4vw,50px);margin-bottom:10px}.project p{margin:0;max-width:650px;color:#555;line-height:1.55}
+.project-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.project-tile{min-height:210px;background:#eee;padding:18px;display:flex;align-items:flex-end;font-size:13px;color:#333}
+.project-tile:nth-child(1){background:linear-gradient(135deg,#f1e7d8,#d8c4a8)}.project-tile:nth-child(2){background:linear-gradient(135deg,#dfe8e0,#9fb4a4)}.project-tile:nth-child(3){background:linear-gradient(135deg,#e6e1ed,#b7a7cc)}
+.about-grid{display:grid;grid-template-columns:1fr 2fr;gap:25px}.about-copy{font-size:clamp(23px,3vw,42px);line-height:1.18;letter-spacing:-.045em;max-width:900px}.about-copy p{margin:0 0 25px}.about-copy .small{font-size:16px;line-height:1.6;letter-spacing:0;max-width:680px}
+.contact{background:var(--black);color:#fff;padding:110px 4vw 50px}.contact-inner{max-width:1100px;margin-left:auto}.contact h2{font-size:clamp(58px,10vw,150px);margin:35px 0 30px}.contact-desc{max-width:420px;font-size:16px;line-height:1.5;color:#c8c8ca;margin-bottom:48px}
+.contact-list{border-top:1px solid var(--line)}.contact-link{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;border-bottom:1px solid var(--line);font-size:clamp(23px,4vw,48px);letter-spacing:-.05em;transition:color .2s}.contact-link small{display:block;font-size:10px;letter-spacing:.08em;color:#9d9da0;text-transform:uppercase;margin-bottom:8px}.arrow{font-size:30px}
+footer{display:flex;justify-content:space-between;gap:20px;color:#8b8b8d;font-size:10px;text-transform:uppercase;letter-spacing:.05em;padding-top:40px}
+
+.tariff-cta{margin:65px 0 0;border-top:1px solid #c9c8c8;padding:30px 0 0;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.tariff-cta h3{font-size:clamp(25px,3.4vw,42px);margin:18px 0 10px}
+.tariff-cta p{margin:0;color:#555;line-height:1.5;max-width:520px}
+.tariffs{background:#fff}
+.tariff-intro{display:flex;justify-content:space-between;align-items:center;gap:30px;margin:-25px 0 40px}
+.tariff-intro p{max-width:560px;line-height:1.55;color:#555}
+.price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.price-card{border-radius:28px;padding:30px;background:#bd0c2e;color:#fff;min-height:275px;display:flex;flex-direction:column;align-items:flex-start}
+.price-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.price-name{font-size:clamp(25px,3vw,38px);font-weight:700;letter-spacing:-.05em;margin-top:30px}
+.price-value{font-size:clamp(36px,5vw,60px);font-weight:800;letter-spacing:-.06em;background:#fff5f5;color:#bd0c2e;border-radius:100px;padding:9px 24px;margin-top:12px}
+.price-card p{margin:18px 0 8px;line-height:1.45}
+.price-foot{font-size:12px;opacity:.85;margin-top:auto;padding-top:15px}
+.price-list{margin-top:28px;border-top:1px solid #e1cfd0}
+.price-row{display:flex;align-items:center;gap:20px;padding:13px 0;border-bottom:1px solid #e1cfd0;font-size:15px;line-height:1.4}
+.price-pill{flex:0 0 105px;background:#bd0c2e;color:#fff;border-radius:100px;text-align:center;padding:10px 12px;font-weight:700;white-space:nowrap}
+.price-note{text-align:center;font-size:13px;color:#666;line-height:1.5;margin:35px auto 0;max-width:420px}
+.price-note strong{color:#bd0c2e}
+@media(max-width:800px){
+.tariff-cta,.tariff-intro{align-items:flex-start;flex-direction:column}
+.price-grid{grid-template-columns:1fr}
+.price-card{min-height:245px;padding:25px;border-radius:22px}
+.price-row{gap:12px;font-size:14px}
+.price-pill{flex-basis:90px}
+.nav{padding:16px 5vw;align-items:flex-start}.navlinks{gap:12px;padding:13px;font-size:9px}.nav-telegram{display:none}.hero{display:flex;flex-direction:column;padding:105px 0 0 5vw;min-height:0}.hero-copy{padding:20px 5vw 0 0}h1{font-size:clamp(52px,13vw,92px);margin-bottom:0}.hero-bottom{margin:50px 0 0 -5vw;padding:24px 5vw;grid-template-columns:1fr;gap:20px}.hero-visual{min-height:300px}section{padding:70px 5vw}.section-top,.about-grid{grid-template-columns:1fr;gap:25px;margin-bottom:40px}.service-grid{grid-template-columns:1fr}.service,.service+.service{border-left:0;border-bottom:1px solid #c9c8c8;padding:22px 0;min-height:0}.service-num{margin-bottom:14px}.work-head{display:block}.work-note{margin-top:20px}.project-gallery{grid-template-columns:1fr}.project-tile{min-height:150px}.contact{padding:75px 5vw 35px}.contact-inner{margin:0}footer{flex-direction:column}}
+@media(max-width:430px){.brand{font-size:12px}.navlinks{gap:9px;padding:11px 9px;font-size:8px}.contact-link{font-size:23px}}
+
+/* Global rounded-card UX/UI refresh */
+:root{
+  --black:#111113;
+  --white:#f7f5f4;
+  --muted:#77777d;
+  --line:rgba(17,17,19,.12);
+  --red:#bd0c2e;
+  --radius-xl:34px;
+  --radius-lg:24px;
+  --radius-md:16px;
+}
+body{background:#f7f5f4;color:#171719;line-height:1.45}
+.nav{position:absolute;padding:22px 4vw;gap:18px}
+.brand{border-radius:999px;padding:11px 16px;box-shadow:0 6px 22px rgba(0,0,0,.08)}
+.navlinks{border:1px solid rgba(255,255,255,.09);border-radius:999px;padding:9px;gap:4px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.navlinks a{padding:11px 13px;border-radius:999px;transition:background .2s,color .2s}
+.navlinks a:hover{background:#fff;color:#111;opacity:1}
+.nav-telegram{display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(255,255,255,.25);border-radius:50%;transition:background .2s}
+.nav-telegram:hover{background:var(--red);opacity:1}
+.hero{padding-top:130px;gap:18px;padding-right:4vw;padding-bottom:4vw;min-height:760px}
+.hero-copy{border-radius:var(--radius-xl);overflow:hidden;padding:36px 0 0 28px;background:#111113}
+.hero-copy h1{padding-right:24px;font-size:clamp(56px,7.7vw,120px);letter-spacing:-.075em}
+.hero-bottom{margin:55px 0 0 -28px;padding:27px 28px 30px;border-radius:0 var(--radius-xl) 0 0;gap:22px}
+.hero-visual{border-radius:var(--radius-xl);min-height:600px;align-self:stretch;box-shadow:0 18px 50px rgba(105,0,20,.14)}
+.portrait-placeholder{border-radius:var(--radius-xl)}
+section{padding:95px 4vw}
+.services,.about,.work,.tariffs{border-radius:var(--radius-xl);margin:18px 2vw;padding:76px 3vw}
+.services{background:#eeeceb}
+.section-top{margin-bottom:48px;gap:35px}
+.section-index{color:#777;font-weight:600}
+.service-grid{gap:14px;border:0}
+.service,.service+.service{border:1px solid rgba(0,0,0,.08);border-radius:var(--radius-lg);background:#fff;padding:26px;min-height:220px;transition:transform .2s,box-shadow .2s}
+.service:hover{transform:translateY(-4px);box-shadow:0 15px 35px rgba(0,0,0,.06)}
+.service-num{display:inline-flex;align-items:center;justify-content:center;border:1px solid #ddd;border-radius:999px;padding:7px 11px;margin-bottom:28px}
+.service p{color:#666}
+.button{border-radius:999px;padding:16px 23px;gap:24px;transition:transform .2s,background .2s,box-shadow .2s}
+.button:hover{box-shadow:0 9px 24px rgba(189,12,46,.2)}
+.work{background:#fff}
+.work-head{align-items:center}
+.project{border:1px solid rgba(0,0,0,.1);border-radius:var(--radius-xl);padding:28px;margin:0 0 18px}
+.project-meta{align-items:center}
+.project-meta span{background:#f1efee;border-radius:999px;padding:9px 12px}
+.project-gallery{gap:14px}
+.project-tile{border-radius:var(--radius-lg);min-height:230px;transition:transform .2s;overflow:hidden}
+.project-tile:hover{transform:translateY(-3px)}
+.tariff-cta{border:1px solid rgba(0,0,0,.1);border-radius:var(--radius-xl);background:#fff;padding:30px;margin-top:50px}
+.tariffs{background:#fff}
+.tariff-intro{margin-top:-15px}
+.price-grid{gap:18px}
+.price-card{border-radius:var(--radius-xl);padding:32px;box-shadow:0 15px 35px rgba(130,0,25,.08);transition:transform .2s,box-shadow .2s}
+.price-card:hover{transform:translateY(-4px);box-shadow:0 20px 45px rgba(130,0,25,.15)}
+.price-value{border-radius:999px}
+.price-list{border:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.price-row{border:1px solid rgba(189,12,46,.12);background:rgba(255,255,255,.78);border-radius:var(--radius-lg);padding:16px;gap:14px}
+.price-pill{border-radius:999px;flex-basis:100px}
+.price-note{background:#fff;border-radius:var(--radius-lg);padding:20px;max-width:none}
+.about{background:#eeeceb}
+.about-grid{gap:35px}
+.contact{border-radius:var(--radius-xl) var(--radius-xl) 0 0;margin:18px 2vw 0;padding:80px 3vw 35px;overflow:hidden}
+.contact-inner{max-width:100%;padding-left:30%}
+.contact h2{font-size:clamp(56px,8vw,120px)}
+.contact-list{border:0;display:grid;gap:12px}
+.contact-link{border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 24px;background:rgba(255,255,255,.035);transition:background .2s,transform .2s}
+.contact-link:hover{background:rgba(255,255,255,.08);transform:translateX(4px);opacity:1}
+.arrow{display:grid;place-items:center;width:42px;height:42px;border:1px solid var(--line);border-radius:50%}
+footer{padding-top:35px}
+@media(max-width:800px){
+ .nav{padding:14px 4vw;align-items:center;gap:8px}.brand{font-size:11px;padding:9px 11px}.navlinks{gap:0;padding:5px}.navlinks a{padding:9px 7px;font-size:8px}
+ .hero{padding:90px 4vw 4vw;gap:12px}.hero-copy{padding:28px 0 0 20px;border-radius:26px}.hero-copy h1{font-size:clamp(47px,10vw,76px);padding-right:16px}.hero-bottom{margin:38px 0 0 -20px;padding:24px 20px;grid-template-columns:1fr;border-radius:0 24px 0 0}
+ .hero-visual{min-height:300px;border-radius:26px}
+ section{padding:65px 4vw}.services,.about,.work,.tariffs{margin:12px 2vw;padding:42px 5vw;border-radius:26px}.section-top{margin-bottom:32px;grid-template-columns:1fr;gap:18px}
+ .service-grid{grid-template-columns:1fr}.service,.service+.service{min-height:0;padding:23px;border-radius:20px}.service-num{margin-bottom:18px}
+ .work-head{display:block}.work-note{margin-top:18px}.project{padding:20px;border-radius:24px}.project-meta{flex-wrap:wrap}.project-gallery{grid-template-columns:1fr}.project-tile{min-height:150px;border-radius:18px}
+ .tariff-cta,.tariff-intro{align-items:flex-start;flex-direction:column}.tariff-cta{padding:24px;border-radius:24px}.price-grid,.price-list{grid-template-columns:1fr}.price-card{min-height:240px;padding:25px;border-radius:24px}.price-row{border-radius:18px}.price-pill{flex-basis:90px}
+ .contact{margin:12px 2vw 0;padding:48px 5vw 30px;border-radius:26px 26px 0 0}.contact-inner{padding-left:0}.contact h2{font-size:clamp(52px,12vw,84px)}.contact-link{font-size:22px;padding:18px}
+ footer{flex-direction:column;gap:12px}
+}
+@media(max-width:430px){
+ .nav{flex-wrap:wrap}.navlinks{order:3;width:100%;justify-content:space-around}.hero{padding-top:120px}.brand{font-size:10px}.hero-copy h1{font-size:48px}.contact-link{font-size:19px}
+}
+
+
+/* Hero identity carousel */
+.hero-visual{position:relative;padding:0;display:block;min-width:0}
+.hero-carousel{height:100%;min-height:600px;position:relative;overflow:hidden;border-radius:inherit;color:#fff}
+.hero-slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,3.2vw,48px);opacity:0;visibility:hidden;transform:translateX(18px);transition:opacity .35s ease,transform .35s ease,visibility .35s}
+.hero-slide.is-active{opacity:1;visibility:visible;transform:translateX(0)}
+.hero-name{background:linear-gradient(145deg,#c10a2e 0%,#e51b35 54%,#92001d 100%)}
+.slide-kicker{font-size:10px;letter-spacing:.13em;text-transform:uppercase;opacity:.85}
+.slide-name{font-size:clamp(44px,6.2vw,90px);font-weight:800;line-height:.9;letter-spacing:-.075em;overflow-wrap:anywhere}
+.slide-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.4);padding-top:16px;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.hero-photo{padding:0;background:#b90a2b}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 27%}
+.photo-caption{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:5px;padding:52px 24px 75px;background:linear-gradient(transparent,rgba(0,0,0,.68));font-size:11px;letter-spacing:.07em}
+.photo-caption span:last-child{opacity:.78}
+.hero-carousel-controls{position:absolute;z-index:3;bottom:18px;left:18px;right:18px;display:flex;align-items:center;gap:12px}
+.carousel-arrow{width:38px;height:38px;border:1px solid rgba(255,255,255,.55);background:rgba(10,10,10,.22);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:17px;cursor:pointer;transition:background .2s,transform .2s}
+.carousel-arrow:hover{background:rgba(255,255,255,.2);transform:scale(1.04)}
+.carousel-dots{display:flex;gap:7px;align-items:center}
+.carousel-dot{width:8px;height:8px;border:0;border-radius:50%;padding:0;background:rgba(255,255,255,.45);cursor:pointer}
+.carousel-dot.is-active{background:#fff;transform:scale(1.25)}
+.carousel-count{margin-left:auto;font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.8)}
+@media(max-width:800px){
+ .hero-carousel{min-height:380px}
+ .hero-slide{padding:25px}
+ .slide-name{font-size:clamp(44px,10vw,72px)}
+ .hero-carousel-controls{bottom:14px;left:14px;right:14px}
+ .hero-photo img{object-position:center 24%}
+}
+@media(prefers-reduced-motion:reduce){.hero-slide,.carousel-arrow{transition:none}}
+
+
+/* Clickable project previews and lightbox gallery */
+.product-gallery{align-items:stretch}
+.product-preview{appearance:none;border:0;text-align:left;position:relative;padding:0;cursor:pointer;min-width:0;overflow:hidden;background:#f4e8e9;color:#fff;display:block}
+.product-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .35s ease}
+.product-preview:hover img{transform:scale(1.035)}
+.preview-caption{position:absolute;inset:auto 0 0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:45px 16px 16px;background:linear-gradient(transparent,rgba(15,8,10,.78));font-size:12px;line-height:1.35;color:#fff}
+.preview-open{flex:0 0 34px;width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.65);border-radius:50%;font-size:18px}
+.product-placeholder{background:linear-gradient(145deg,#f2e4e6,#dfc8cc);color:#68132b;cursor:default;display:flex;flex-direction:column;justify-content:flex-end;gap:12px}
+.product-placeholder span{position:relative;z-index:1}
+.preview-hint{font-size:10px;text-transform:uppercase;letter-spacing:.1em;opacity:.65}
+.gallery-lightbox{position:fixed;inset:0;z-index:1000;background:rgba(10,10,12,.94);display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,38px);padding:70px 24px 30px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s,visibility .25s}
+.gallery-lightbox.is-open{opacity:1;visibility:visible;pointer-events:auto}
+.lightbox-content{height:100%;max-height:calc(100vh - 105px);max-width:min(70vw,700px);display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0}
+.lightbox-content img{display:block;max-width:100%;max-height:calc(100% - 52px);width:auto;height:auto;object-fit:contain;border-radius:16px;box-shadow:0 15px 60px rgba(0,0,0,.35)}
+.lightbox-caption{width:100%;display:flex;justify-content:space-between;gap:16px;padding:14px 4px 0;color:#fff;font-size:12px}
+.lightbox-caption span:last-child{color:#aaa;white-space:nowrap}
+.lightbox-close{position:absolute;top:20px;right:24px;width:46px;height:46px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;border-radius:50%;font-size:28px;cursor:pointer}
+.lightbox-nav{flex:0 0 46px;width:46px;height:46px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;border-radius:50%;font-size:20px;cursor:pointer;transition:background .2s}
+.lightbox-nav:hover,.lightbox-close:hover{background:rgba(255,255,255,.2)}
+@media(max-width:800px){
+ .product-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .product-preview{min-height:260px}
+ .product-placeholder{min-height:180px}
+ .gallery-lightbox{padding:75px 12px 22px;gap:8px}
+ .lightbox-content{max-width:calc(100vw - 110px);max-height:calc(100vh - 125px)}
+ .lightbox-nav{flex-basis:34px;width:34px;height:34px;font-size:16px}
+ .lightbox-close{top:14px;right:14px;width:40px;height:40px}
+ .lightbox-caption{font-size:10px}
+}
+@media(max-width:430px){
+ .product-gallery{grid-template-columns:1fr}
+ .product-preview{min-height:360px}
+}
+
+
+/* Both example slides belong to one portfolio tile: cover + main accent */
+.product-gallery{grid-template-columns:1fr}
+.combined-preview{width:100%;min-height:420px;cursor:pointer}
+.combined-images{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px;background:#f5e9eb}
+.combined-images img{position:relative;inset:auto;width:100%;height:100%;min-width:0;min-height:0;object-fit:contain;background:#fff;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.combined-preview .preview-caption{z-index:2}
+@media(max-width:800px){
+ .combined-preview{min-height:340px}
+ .combined-images{gap:7px;padding:8px}
+ .combined-images img{border-radius:10px}
+}
+@media(max-width:430px){.combined-preview{min-height:300px}}
+
+
+/* Three separate portfolio tiles; tile 1 previews one image and opens a two-image lightbox */
+.product-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.combined-preview{width:100%;min-height:230px;cursor:pointer}
+.combined-images{position:absolute;inset:0;display:block;padding:0;background:#f5e9eb}
+.combined-images img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;border-radius:inherit;box-shadow:none}
+.product-placeholder{appearance:none;border:0;text-align:left;position:relative;padding:0;cursor:pointer;min-width:0;overflow:hidden;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(145deg,#d8c5a8,#cbb392)}
+.product-placeholder:nth-child(3){background:linear-gradient(145deg,#c7b8d5,#b4a1c7)}
+.product-placeholder .placeholder-title{position:absolute;top:24px;left:22px;right:22px;font-size:clamp(18px,2vw,28px);font-weight:600;letter-spacing:-.04em;color:rgba(25,20,25,.72)}
+.product-placeholder .preview-caption{z-index:2}
+@media(max-width:800px){.product-gallery{grid-template-columns:1fr}.combined-preview,.product-placeholder{min-height:280px}}
+
+
+/* Advantages tile: its own one-image preview, click opens two-slide gallery */
+.advantages-preview .combined-images img{object-fit:cover;object-position:center}
+@media(max-width:800px){
+ .advantages-preview{min-height:280px}
+}
+
+
+.details-preview .combined-images img{object-fit:cover;object-position:center}
+
+.project-card--second{margin-top:28px}
+.project-card--second .section-index{opacity:.8}
+
+/* Mobile image viewing: full-screen, touch-friendly lightbox */
+img.portfolio-tap-view{cursor:zoom-in;-webkit-tap-highlight-color:transparent;touch-action:pan-y}
+#mobile-photo-viewer{position:fixed;inset:0;z-index:20000;display:none;align-items:center;justify-content:center;background:rgba(8,8,10,.97);padding:64px 12px 54px;box-sizing:border-box;overscroll-behavior:contain}
+#mobile-photo-viewer.is-open{display:flex}
+#mobile-photo-viewer .mpv-image{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;user-select:none;-webkit-user-drag:none;border-radius:8px}
+#mobile-photo-viewer .mpv-close,#mobile-photo-viewer .mpv-prev,#mobile-photo-viewer .mpv-next{position:absolute;display:flex;align-items:center;justify-content:center;color:#fff;background:rgba(30,30,34,.78);border:1px solid rgba(255,255,255,.38);border-radius:999px;width:46px;height:46px;font-size:27px;line-height:1;z-index:2;cursor:pointer;touch-action:manipulation}
+#mobile-photo-viewer .mpv-close{top:max(12px,env(safe-area-inset-top));right:14px}
+#mobile-photo-viewer .mpv-prev{left:10px;top:50%;transform:translateY(-50%)}
+#mobile-photo-viewer .mpv-next{right:10px;top:50%;transform:translateY(-50%)}
+#mobile-photo-viewer .mpv-count{position:absolute;bottom:max(14px,env(safe-area-inset-bottom));left:0;right:0;text-align:center;color:#eee;font:13px/1.4 system-ui,sans-serif}
+@media(max-width:800px){
+ #mobile-photo-viewer{padding:62px 8px 48px}
+ #mobile-photo-viewer .mpv-image{max-width:100%;max-height:100%;border-radius:4px}
+ #mobile-photo-viewer .mpv-prev{left:6px}
+ #mobile-photo-viewer .mpv-next{right:6px}
+}
+
+</style>
+<style id="details-preview-caption-fix">
+/* Label and arrow stay at the bottom of the details card, matching the lower card. */
+.product-preview.details-preview { position: relative !important; isolation: isolate; }
+.product-preview.details-preview > .preview-caption {
+  position: absolute !important; left: 0 !important; right: 0 !important; bottom: 0 !important; top: auto !important;
+  z-index: 10 !important; display: flex !important; flex-direction: row !important;
+  align-items: center !important; justify-content: space-between !important; gap: 12px !important;
+  width: 100% !important; box-sizing: border-box !important; padding: 45px 16px 16px !important;
+  margin: 0 !important; background: linear-gradient(transparent, rgba(15,8,10,.78)) !important;
+  color: #fff !important; text-align: left !important; font-size: 12px !important; line-height: 1.35 !important;
+}
+.product-preview.details-preview > .preview-caption > span:first-child {
+  display: block !important; flex: 1 1 auto !important; min-width: 0 !important;
+  color: #fff !important; white-space: normal !important; overflow: visible !important;
+}
+.product-preview.details-preview .preview-open {
+  position: relative !important; flex: 0 0 34px !important; width: 34px !important; height: 34px !important;
+  margin: 0 !important; padding: 0 !important; display: grid !important; place-items: center !important;
+  border: 1px solid rgba(255,255,255,.65) !important; border-radius: 50% !important;
+  color: #fff !important; background: transparent !important; font-size: 18px !important;
+}
+</style>
+<style id="visual-system-project-style">
+.project-visual-system { margin-top: 26px; }
+.visual-system-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:28px; }
+.visual-system-tile { position:relative; display:block; width:100%; aspect-ratio:560/210; overflow:hidden; border:0; border-radius:0; padding:0; text-align:left; cursor:pointer; background:#eee; }
+.visual-system-art { position:absolute; inset:0; display:block; transition:transform .35s ease; }
+.art-concept { background:linear-gradient(125deg,#f0e6d7 0%,#d9c6ab 100%); }
+.art-info { background:linear-gradient(125deg,#dce6de 0%,#9fb5a6 100%); }
+.art-final { background:linear-gradient(125deg,#e5dfeb 0%,#b8a7cb 100%); }
+.visual-system-tile:hover .visual-system-art { transform:scale(1.025); }
+.visual-system-caption { position:absolute; inset:auto 0 0; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:44px 18px 16px; color:#171717; font-size:12px; line-height:1.35; background:linear-gradient(transparent,rgba(0,0,0,.08)); }
+.visual-system-caption .preview-open { display:grid; place-items:center; width:34px; height:34px; flex:0 0 34px; border:1px solid rgba(255,255,255,.75); border-radius:50%; color:#fff; font-size:18px; }
+@media(max-width:700px) { .visual-system-gallery { grid-template-columns:1fr; } .visual-system-tile { aspect-ratio:560/250; } }
+</style>
+<style id="visual-carousel-style">
+/* Простая горизонтальная лента: все слайды стоят в ряд, прокрутка в обе стороны. */
+.project-gallery.visual-carousel { display:block !important; width:100%; min-width:0; margin-top:28px; }
+.visual-carousel-viewport { width:100%; overflow-x:auto; overflow-y:hidden; scroll-behavior:smooth; scrollbar-width:thin; scrollbar-color:#444 #e3e3e3; padding-bottom:10px; }
+.visual-carousel-track { display:flex; flex-flow:row nowrap; align-items:stretch; gap:14px; width:max-content; min-width:100%; transform:none !important; transition:none; }
+.visual-carousel-slide { display:block; flex:0 0 auto; width:auto; height: min(58vh, 560px); max-width:none; object-fit:contain; object-position:left center; background:#f1f0ef; }
+.visual-carousel-controls { display:flex; justify-content:flex-end; align-items:center; gap:8px; padding:12px 0 0; }
+.visual-carousel-arrow { display:grid; place-items:center; width:42px; height:42px; border:1px solid #d8d6d5; border-radius:50%; background:#fff; color:#171719; font-size:22px; cursor:pointer; transition:background .2s,color .2s,border-color .2s; }
+.visual-carousel-arrow:hover { background:#171719; color:#fff; border-color:#171719; }
+@media(max-width:700px) { .visual-carousel-track { gap:10px; } .visual-carousel-slide { height:52vh; max-height:430px; } .visual-carousel-arrow { width:38px; height:38px; } }
+</style>
+
+<style id="multi-category-project-style">
+.project-multi-category { margin-top:26px; }
+.project-multi-category .project-gallery { display:block !important; width:100%; min-width:0; margin-top:28px; }
+.project-multi-category .visual-carousel-viewport { width:100%; overflow-x:auto; overflow-y:hidden; scroll-behavior:smooth; scrollbar-width:thin; scrollbar-color:#444 #e3e3e3; padding-bottom:10px; }
+.project-multi-category .visual-carousel-track { display:flex; flex-flow:row nowrap; align-items:stretch; gap:14px; width:max-content; min-width:100%; }
+.project-multi-category .visual-carousel-slide { display:block; flex:0 0 auto; width:auto; height:min(58vh,560px); max-width:none; object-fit:contain; object-position:left center; background:#f1f0ef; border-radius:12px; }
+.project-multi-category .visual-carousel-controls { display:flex; justify-content:flex-end; align-items:center; gap:8px; padding:12px 0 0; }
+.project-multi-category .visual-carousel-count { margin-right:auto; color:#777; font-size:12px; }
+.project-multi-category .visual-carousel-arrow { display:grid; place-items:center; width:42px; height:42px; border:1px solid #d8d6d5; border-radius:50%; background:#fff; color:#171719; font-size:22px; cursor:pointer; transition:background .2s,color .2s,border-color .2s; }
+.project-multi-category .visual-carousel-arrow:hover { background:#171719; color:#fff; border-color:#171719; }
+@media(max-width:700px){.project-multi-category .visual-carousel-track{gap:10px}.project-multi-category .visual-carousel-slide{height:52vh;max-height:430px}.project-multi-category .visual-carousel-arrow{width:38px;height:38px}}
+</style>
+
+
+<style id="mobile-optimization-v2">
+/* Mobile-first refinements: navigation, readable type, touch targets and galleries */
+html{scroll-padding-top:18px;-webkit-text-size-adjust:100%}
+img{max-width:100%}
+button,a{-webkit-tap-highlight-color:transparent}
+@media(max-width:700px){
+  body{overflow-x:hidden}
+  .nav{position:absolute;left:0;right:0;width:100%;padding:12px 4vw;gap:10px;align-items:center}
+  .brand{font-size:10px;letter-spacing:-.02em;padding:9px 11px;white-space:nowrap}
+  .navlinks{display:flex;order:0;width:auto;max-width:100%;flex:1;justify-content:space-between;gap:1px;padding:4px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+  .navlinks::-webkit-scrollbar{display:none}
+  .navlinks a{padding:9px 7px;font-size:8px;letter-spacing:0;flex:0 0 auto}
+  .nav-telegram{display:none}
+  .hero{padding:112px 4vw 4vw;min-height:0;display:flex;flex-direction:column;gap:12px}
+  .hero-copy{padding:24px 0 0 18px;border-radius:22px}
+  .hero-copy h1{font-size:clamp(42px,10.5vw,70px);line-height:.96;letter-spacing:-.075em;padding-right:12px;overflow-wrap:normal}
+  .hero-bottom{margin:30px 0 0 -18px;padding:20px 18px;grid-template-columns:1fr;gap:14px;border-radius:0 20px 0 0}
+  .eyebrow{font-size:10px}
+  .intro{font-size:15px;line-height:1.55;margin-bottom:18px}
+  .button{min-height:48px;padding:14px 18px;font-size:10px;justify-content:space-between;max-width:100%}
+  .hero-visual{min-height:0;height:auto;aspect-ratio:4/5;border-radius:22px}
+  .hero-carousel{min-height:0;height:100%;border-radius:inherit}
+  .hero-slide{padding:22px}
+  .slide-name{font-size:clamp(42px,11vw,68px)}
+  section{padding:34px 0}
+  .services,.about,.work,.tariffs{margin:10px 2vw;padding:30px 4.5vw;border-radius:22px}
+  .section-top{grid-template-columns:1fr;gap:12px;margin-bottom:28px}
+  .section-index,.work-note{font-size:10px}
+  h2{font-size:clamp(34px,9vw,54px);line-height:1.02}
+  .service-grid{grid-template-columns:1fr;gap:10px}
+  .service,.service+.service{padding:20px;border-radius:17px;min-height:0}
+  .service-num{margin-bottom:15px}
+  h3{font-size:22px}
+  .service p,.project p,.tariff-intro p,.about-copy .small{font-size:14px;line-height:1.6}
+  .work-head{display:block;margin-bottom:28px}
+  .work-note{margin-top:12px;line-height:1.5}
+  .project{padding:16px;margin-bottom:12px;border-radius:20px}
+  .project-meta{gap:8px;margin-bottom:18px;font-size:9px;letter-spacing:.03em}
+  .project-meta span{padding:7px 9px;max-width:100%}
+  .project h3{font-size:clamp(25px,7vw,36px);line-height:1.05}
+  .project-gallery.visual-carousel{margin-top:20px}
+  .visual-carousel-viewport{margin-right:-2px;padding-bottom:8px;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+  .visual-carousel-track{gap:10px;min-width:0}
+  .visual-carousel-slide{height:auto;width:auto;max-width:calc(100vw - 15vw);max-height:62vh;scroll-snap-align:start;border-radius:12px;object-fit:contain}
+  .project-multi-category .visual-carousel-slide{height:auto;max-width:calc(100vw - 15vw);max-height:62vh;scroll-snap-align:start}
+  .visual-carousel-controls{justify-content:flex-end;padding-top:10px}
+  .visual-carousel-count{font-size:11px}
+  .visual-carousel-arrow,.project-multi-category .visual-carousel-arrow{width:42px;height:42px;flex:0 0 42px}
+  .tariff-cta{margin-top:28px;padding:20px;border-radius:20px;gap:14px}
+  .tariff-cta h3{font-size:25px;line-height:1.1}
+  .tariff-intro{margin:0 0 24px;gap:16px}
+  .price-grid,.price-list{grid-template-columns:1fr;gap:10px}
+  .price-card{min-height:0;padding:23px;border-radius:22px}
+  .price-name{font-size:29px;margin-top:20px}
+  .price-value{font-size:clamp(34px,9vw,48px);padding:8px 18px}
+  .price-row{align-items:flex-start;padding:13px;border-radius:15px;font-size:13px;gap:10px}
+  .price-pill{flex:0 0 86px;padding:9px 8px;font-size:12px;white-space:normal}
+  .price-note{padding:16px;font-size:12px;line-height:1.55}
+  .about-grid{grid-template-columns:1fr;gap:16px}
+  .about-copy{font-size:clamp(23px,6.5vw,32px);line-height:1.2}
+  .contact{margin:10px 2vw 0;padding:36px 5vw 25px;border-radius:22px 22px 0 0}
+  .contact-inner{padding-left:0;margin:0}
+  .contact h2{font-size:clamp(46px,12vw,72px);line-height:.98;margin:24px 0}
+  .contact-desc{font-size:14px;margin-bottom:28px}
+  .contact-list{gap:9px}
+  .contact-link{font-size:clamp(19px,5.4vw,24px);padding:16px;border-radius:16px;gap:10px;min-width:0;overflow-wrap:anywhere}
+  .contact-link small{font-size:9px}
+  .arrow{width:36px;height:36px;flex:0 0 36px;font-size:22px}
+  footer{font-size:9px;line-height:1.5;padding-top:26px;gap:10px}
+}
+@media(max-width:380px){
+  .nav{flex-wrap:wrap;align-items:center}
+  .brand{font-size:10px}
+  .navlinks{order:3;flex:0 0 100%;width:100%;justify-content:space-between}
+  .navlinks a{font-size:8px;padding:8px 6px}
+  .hero{padding-top:142px}
+  .hero-copy h1{font-size:clamp(39px,10.5vw,46px)}
+  .project-meta{align-items:flex-start;flex-direction:column}
+  .price-row{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+
+</head>
+<body>
+<nav class="nav"><a class="brand" href="#top">РУСЛАН ЕМЕЛЬЯНОВ</a><div class="navlinks"><a href="#works">Работы</a><a href="#services">Услуги</a><a href="#tariffs">Цены</a><a href="#about">Обо мне</a><a href="#contact">Связь</a></div><a aria-label="Telegram-канал" class="nav-telegram" href="https://t.me/heihodesign" rel="noopener" target="_blank">↗</a></nav>
+<main id="top">
+<header class="hero"><div class="hero-copy"><h1>Дизайн,<br/>который<br/>раскрывает<br/>ценность товара.</h1><div class="hero-bottom"><div class="eyebrow">[ ПОРТФОЛИО / 2026 ]<br/>ЛИСТАЙТЕ ВНИЗ ↓</div><div><p class="intro">Помогаю брендам представить продукт через понятный и выразительный дизайн. От идеи и структуры до готовых карточек для маркетплейсов.</p><a class="button" href="#works">Смотреть работы <span>↗</span></a></div></div></div><div aria-label="Презентация Руслана Емельянова" class="hero-visual">
+<div class="hero-carousel">
+<article aria-hidden="false" class="hero-slide hero-name is-active">
+<div class="slide-kicker">ДИЗАЙНЕР ИНФОГРАФИКИ · 2026</div>
+<div class="slide-name">РУСЛАН<br/>ЕМЕЛЬЯНОВ</div>
+<div class="slide-bottom"><span>3+ года опыта</span><span>↗</span></div>
+</article>
+<article aria-hidden="true" class="hero-slide hero-photo">
+<img alt="Фотография Руслана с девушкой" src="assets/image_01.jpg"/>
+<div class="photo-caption"><span>РУСЛАН ЕМЕЛЬЯНОВ</span><span>Дизайнер инфографики</span></div>
+</article>
+<div aria-label="Переключение слайдов" class="hero-carousel-controls">
+<button aria-label="Предыдущий слайд" class="carousel-arrow" data-dir="-1" type="button">←</button>
+<div class="carousel-dots">
+<button aria-current="true" aria-label="Показать имя" class="carousel-dot is-active" data-slide="0" type="button"></button>
+<button aria-current="false" aria-label="Показать фотографию" class="carousel-dot" data-slide="1" type="button"></button>
+</div>
+<span class="carousel-count"><span id="slide-current">01</span> / 02</span>
+<button aria-label="Следующий слайд" class="carousel-arrow" data-dir="1" type="button">→</button>
+</div>
+</div>
+</div></header>
+<section class="services" id="services"><div class="section-top"><div class="section-index">01 / Подход и услуги</div><h2>Показываю ценность товара.<br/>Выделяю главное.<br/>Продумываю каждый слайд.</h2></div><div class="service-grid"><article class="service"><div class="service-num">[01]</div><h3>Карточки товара</h3><p>Обложки, инфографика и последовательность слайдов, которые помогают покупателю быстро понять продукт.</p></article><article class="service"><div class="service-num">[02]</div><h3>Структура и подача</h3><p>Выстраиваю логику презентации: преимущества, особенности и ответы на вопросы покупателя.</p></article><article class="service"><div class="service-num">[03]</div><h3>Визуальное оформление</h3><p>Композиция, типографика и единый стиль серии карточек — для целостной и узнаваемой подачи товара.</p></article></div>
+<div class="tariff-cta">
+<div>
+<div class="section-index">ПОНЯТНЫЕ УСЛОВИЯ · 2026</div>
+<h3>Нужна инфографика для товара?</h3>
+<p>Посмотрите стоимость услуг и выберите подходящий формат работы.</p>
+</div>
+<a class="button" href="#tariffs">Смотреть тарифы <span>↘</span></a>
+</div>
+</section>
+<section class="work" id="works"><div class="work-head"><h2>Избранные<br/>работы.</h2><div class="work-note">02 / Проекты · примеры оформления</div></div><article class="project"><div class="project-meta"><span>Проект 01 / Инфографика</span><span>01 — 03</span></div><h3>Карточки для маркетплейсов</h3><p>Визуальная подача товара, акценты на ключевых характеристиках и единая система слайдов.</p><div aria-label="Три блока портфолио" class="project-gallery product-gallery">
+<button aria-label="Открыть первый блок: обложка и главный акцент" class="project-tile product-preview combined-preview" data-gallery="conditioner" data-index="0" type="button">
+<span class="combined-images">
+<img alt="Обложка кондиционера Libelove" src="assets/image_02.jpg"/>
+</span>
+<span class="preview-caption"><span>01 / Обложка и главный акцент</span><span class="preview-open">↗</span></span>
+</button>
+<button aria-label="Открыть галерею: преимущества продукта" class="project-tile product-preview combined-preview advantages-preview" data-gallery="advantages" data-index="0" type="button">
+<span class="combined-images">
+<img alt="Слайд с преимуществами кондиционера Libelove: восстановление, гладкость и мягкость" src="assets/image_03.jpg"/>
+</span>
+<span class="preview-caption"><span>02 / Преимущества продукта</span><span class="preview-open">↗</span></span>
+</button>
+<button aria-label="Открыть галерею: детали и характеристики" class="project-tile product-preview combined-preview details-preview" data-gallery="details" data-index="0" type="button">
+<span class="combined-images"><img alt="Детали и характеристики кондиционера Libelove" src="assets/image_04.jpg"/></span>
+<span class="preview-caption"><span>03 / Детали и характеристики</span><span aria-hidden="true" class="preview-open">↗</span></span>
+</button>
+<button aria-label="Открыть первый блок: обложка и главный акцент" class="project-tile product-preview combined-preview" data-gallery="shampoo-cover" data-index="0" type="button">
+<span class="combined-images">
+<img alt="Шампунь Libelove — слайд 1" src="assets/image_05.jpg"/>
+</span>
+<span class="preview-caption"><span>01 / Обложка и главный акцент</span><span class="preview-open">↗</span></span>
+</button>
+<button aria-label="Открыть галерею: преимущества продукта" class="project-tile product-preview combined-preview advantages-preview" data-gallery="shampoo-benefits" data-index="0" type="button">
+<span class="combined-images">
+<img alt="Шампунь Libelove — слайд 2" src="assets/image_06.jpg"/>
+</span>
+<span class="preview-caption"><span>02 / Преимущества продукта</span><span class="preview-open">↗</span></span>
+</button>
+<button aria-label="Открыть галерею: детали и характеристики" class="project-tile product-preview combined-preview details-preview" data-gallery="shampoo-details" data-index="0" type="button">
+<span class="combined-images"><img alt="Шампунь Libelove — слайд 3" src="assets/image_07.jpg"/></span>
+<span class="preview-caption"><span>03 / Детали и характеристики</span><span class="preview-open">↗</span></span>
+</button>
+</div></article>
+<article class="project project-visual-system">
+<div class="project-meta"><span>Проект 02 / Визуальная система</span><span>04 — 06</span></div>
+<h3>Единый стиль серии</h3>
+<p>Собираю отдельные слайды в последовательную презентацию, где каждый экран решает конкретную задачу.</p>
+<div aria-label="Слайды проекта Xiaomi Smart Air Purifier 4 Lite" class="project-gallery visual-carousel">
+<div class="visual-carousel-viewport"><div class="visual-carousel-track"><img alt="02 / Информация о товаре" class="visual-carousel-slide" loading="lazy" src="assets/image_08.jpg"/><img alt="03 / Финальная подача" class="visual-carousel-slide" loading="lazy" src="assets/image_09.jpg"/><img alt="04 / Детали и характеристики" class="visual-carousel-slide" loading="lazy" src="assets/image_10.jpg"/><img alt="05 / Детали и характеристики" class="visual-carousel-slide" loading="lazy" src="assets/image_11.jpg"/><img alt="06 / Детали и характеристики" class="visual-carousel-slide" loading="lazy" src="assets/image_12.jpg"/><img alt="07 / Детали и характеристики" class="visual-carousel-slide" loading="lazy" src="assets/image_13.jpg"/><img alt="08 / Детали и характеристики" class="visual-carousel-slide" loading="lazy" src="assets/image_14.jpg"/><img alt="09 / Детали и характеристики" class="visual-carousel-slide" loading="lazy" src="assets/image_15.jpg"/><img alt="10 / Детали и характеристики" class="visual-carousel-slide" loading="lazy" src="assets/image_16.jpg"/><img alt="11 / Детали и характеристики" class="visual-carousel-slide" loading="lazy" src="assets/image_17.jpg"/><img alt="12 / Детали и характеристики" class="visual-carousel-slide" loading="lazy" src="assets/image_18.jpg"/><img alt="13 / Детали и характеристики" class="visual-carousel-slide" loading="lazy" src="assets/image_19.jpg"/><img alt="14 / Детали и характеристики" class="visual-carousel-slide" loading="lazy" src="assets/image_20.jpg"/></div></div>
+<div aria-label="Прокрутка слайдов" class="visual-carousel-controls">
+<button aria-label="Предыдущие слайды" class="visual-carousel-arrow" data-dir="-1" type="button">←</button>
+<button aria-label="Следующие слайды" class="visual-carousel-arrow" data-dir="1" type="button">→</button>
+</div>
+</div>
+<div aria-label="Дополнительные слайды проекта Xiaomi Smart Air Purifier 4 Lite" class="project-gallery visual-carousel additional-visual-carousel">
+<div class="visual-carousel-viewport"><div class="visual-carousel-track"><img alt="Дополнительный слайд Xiaomi — 1" class="visual-carousel-slide" loading="lazy" src="assets/image_21.jpg"/><img alt="Дополнительный слайд Xiaomi — 2" class="visual-carousel-slide" loading="lazy" src="assets/image_22.jpg"/><img alt="Дополнительный слайд Xiaomi — 3" class="visual-carousel-slide" loading="lazy" src="assets/image_23.jpg"/><img alt="Дополнительный слайд Xiaomi — 4" class="visual-carousel-slide" loading="lazy" src="assets/image_24.jpg"/><img alt="Дополнительный слайд Xiaomi — 5" class="visual-carousel-slide" loading="lazy" src="assets/image_25.jpg"/><img alt="Дополнительный слайд Xiaomi — 6" class="visual-carousel-slide" loading="lazy" src="assets/image_26.jpg"/><img alt="Дополнительный слайд Xiaomi — 7" class="visual-carousel-slide" loading="lazy" src="assets/image_27.jpg"/><img alt="Дополнительный слайд Xiaomi — 8" class="visual-carousel-slide" loading="lazy" src="assets/image_28.jpg"/><img alt="Дополнительный слайд Xiaomi — 9" class="visual-carousel-slide" loading="lazy" src="assets/image_29.jpg"/><img alt="Дополнительный слайд Xiaomi — 10" class="visual-carousel-slide" loading="lazy" src="assets/image_30.jpg"/></div></div>
+<div aria-label="Прокрутка дополнительных слайдов" class="visual-carousel-controls">
+<button aria-label="Предыдущие слайды" class="visual-carousel-arrow" data-dir="-1" type="button">←</button>
+<button aria-label="Следующие слайды" class="visual-carousel-arrow" data-dir="1" type="button">→</button>
+</div>
+</div>
+</article>
+<article class="project project-visual-system project-multi-category">
+<div class="project-meta"><span>Проект 03 / Разные категории</span><span>01 — 08</span></div>
+<h3>Разные категории товаров</h3>
+<p>Работаю с товарами разных направлений: от косметики и бытовой техники до электроники и товаров для дома. Для каждой категории подбираю визуальную подачу, которая раскрывает особенности продукта и помогает покупателю быстро понять его преимущества.</p>
+<div aria-label="Примеры дизайна товаров из разных категорий" class="project-gallery visual-carousel">
+<div class="visual-carousel-viewport"><div class="visual-carousel-track"><img alt="Спрей для волос Libelove — рекламная съёмка" class="visual-carousel-slide" loading="lazy" src="assets/image_31.jpg"/><img alt="Спрей для волос Libelove — крупный план" class="visual-carousel-slide" loading="lazy" src="assets/image_32.jpg"/><img alt="Игровой монитор Xiaomi — инфографика" class="visual-carousel-slide" loading="lazy" src="assets/image_33.jpg"/><img alt="Игровой монитор Xiaomi — рекламная концепция" class="visual-carousel-slide" loading="lazy" src="assets/image_34.png"/><img alt="Видеорегистратор — инфографика" class="visual-carousel-slide" loading="lazy" src="assets/image_35.png"/><img alt="Видеорегистратор — характеристики и комплект" class="visual-carousel-slide" loading="lazy" src="assets/image_36.png"/><img alt="Электрическая овощерезка — инфографика" class="visual-carousel-slide" loading="lazy" src="assets/image_37.jpg"/><img alt="Кофеварка STONBERG — инфографика" class="visual-carousel-slide" loading="lazy" src="assets/image_38.jpg"/></div></div>
+<div aria-label="Навигация по слайдам" class="visual-carousel-controls">
+<span class="visual-carousel-count">8 работ · листайте</span>
+<button aria-label="Предыдущие работы" class="visual-carousel-arrow visual-carousel-prev" type="button">←</button>
+<button aria-label="Следующие работы" class="visual-carousel-arrow visual-carousel-next" type="button">→</button>
+</div>
+</div>
+</article>
+</section>
+<section class="tariffs" id="tariffs">
+<div class="section-top">
+<div class="section-index">03 / Стоимость услуг</div>
+<h2>Прозрачные<br/>тарифы.</h2>
+</div>
+<div class="tariff-intro">
+<p>Актуальный прайс на дизайн инфографики для маркетплейсов. Стоимость и условия можно обсудить перед началом работы.</p>
+<a class="button" href="https://t.me/ankap_designer" rel="noopener" target="_blank">Уточнить стоимость <span>↗</span></a>
+</div>
+<div class="price-grid">
+<article class="price-card featured">
+<div class="price-label">Основной слайд</div>
+<div class="price-name">Обложка</div>
+<div class="price-value">1 500 ₽</div>
+<p>Главный слайд карточки товара</p>
+<div class="price-foot">2 круга бесплатных правок</div>
+</article>
+<article class="price-card featured">
+<div class="price-label">Продолжение карточки</div>
+<div class="price-name">Дополнительный слайд</div>
+<div class="price-value">1 000 ₽</div>
+<p>Инфографика и раскрытие преимуществ товара</p>
+<div class="price-foot">2 круга бесплатных правок</div>
+</article>
+</div>
+<div class="price-list">
+<div class="price-row"><span class="price-pill">500 ₽</span><span>Работа по шаблону — замена товара, цвета и других элементов</span></div>
+<div class="price-row"><span class="price-pill">1 000 ₽</span><span>Рич-контент — 1 блок</span></div>
+<div class="price-row"><span class="price-pill">1 000 ₽</span><span>Техническое задание на полный листинг товара</span></div>
+<div class="price-row"><span class="price-pill">200 ₽</span><span>Дополнительные правки</span></div>
+</div>
+<div class="price-note"><strong>Для новых клиентов</strong><br/>Бесплатный анализ товара: анализ выдачи и подбор концепции.</div>
+</section>
+<section class="about" id="about"><div class="about-grid"><div class="section-index">04 / Обо мне</div><div class="about-copy"><p>Меня зовут Руслан Емельянов. Я дизайнер с опытом более трёх лет.</p><p>Работал в крупной компании, взаимодействовал с другими дизайнерами и развивал проекты на фрилансе.</p><p class="small">В работе соединяю визуальную выразительность и понятную структуру: помогаю выделить главное, грамотно показать преимущества и представить товар так, чтобы покупателю было проще разобраться в его ценности.</p></div></div></section>
+<section class="contact" id="contact"><div class="contact-inner"><div class="section-index">05 / Следующий проект</div><h2>Начнём<br/>с вашей идеи.</h2><p class="contact-desc">Расскажите о товаре, задачах и желаемых сроках. Обсудим, как лучше представить ваш продукт.</p><div class="contact-list"><a class="contact-link" href="https://t.me/heihodesign" rel="noopener" target="_blank"><span><small>Telegram · канал</small>@heihodesign</span><span class="arrow">↗</span></a><a class="contact-link" href="https://t.me/ankap_designer" rel="noopener" target="_blank"><span><small>Telegram · личные сообщения</small>@ankap_designer</span><span class="arrow">↗</span></a><a class="contact-link" href="tel:+79054400419"><span><small>Телефон</small>+7 905 440-04-19</span><span class="arrow">↗</span></a></div></div><footer><span>© Руслан Емельянов · 2026</span><span>Дизайн инфографики для маркетплейсов</span><a href="#top">Наверх ↑</a></footer></section>
+</main>
+<script>
+(() => {
+  const carousel = document.querySelector('.hero-carousel');
+  if (!carousel) return;
+  const slides = [...carousel.querySelectorAll('.hero-slide')];
+  const dots = [...carousel.querySelectorAll('.carousel-dot')];
+  const current = carousel.querySelector('#slide-current');
+  let active = 0;
+  function showSlide(index) {
+    active = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      const selected = i === active;
+      slide.classList.toggle('is-active', selected);
+      slide.setAttribute('aria-hidden', String(!selected));
+    });
+    dots.forEach((dot, i) => {
+      const selected = i === active;
+      dot.classList.toggle('is-active', selected);
+      dot.setAttribute('aria-current', String(selected));
+    });
+    current.textContent = String(active + 1).padStart(2, '0');
+  }
+  carousel.querySelectorAll('.carousel-arrow').forEach(button => {
+    button.addEventListener('click', () => showSlide(active + Number(button.dataset.dir)));
+  });
+  dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
+  let startX = null;
+  carousel.addEventListener('touchstart', event => {
+    startX = event.changedTouches[0].clientX;
+  }, {passive:true});
+  carousel.addEventListener('touchend', event => {
+    if (startX === null) return;
+    const delta = event.changedTouches[0].clientX - startX;
+    if (Math.abs(delta) > 45) showSlide(active + (delta < 0 ? 1 : -1));
+    startX = null;
+  }, {passive:true});
+})();
+</script>
+<div aria-hidden="true" aria-label="Просмотр слайдов портфолио" aria-modal="true" class="gallery-lightbox" id="gallery-lightbox" role="dialog">
+<button aria-label="Закрыть просмотр" class="lightbox-close" type="button">×</button>
+<button aria-label="Предыдущий слайд" class="lightbox-nav lightbox-prev" type="button">←</button>
+<div class="lightbox-content">
+<img alt="Слайд портфолио" id="lightbox-image" src="assets/image_02.jpg"/>
+<div class="lightbox-caption"><span id="lightbox-title">Обложка и главный акцент</span><span id="lightbox-count">01 / 02</span></div>
+</div>
+<button aria-label="Следующий слайд" class="lightbox-nav lightbox-next" type="button">→</button>
+</div>
+<script>
+(() => {
+  const modal = document.getElementById('gallery-lightbox');
+  if (!modal) return;
+  const slides = [
+    {src: 'assets/image_02.jpg', alt: 'Обложка карточки кондиционера Libelove', title: 'Обложка и главный акцент'},
+    {src: 'assets/image_39.jpg', alt: 'Слайд с преимуществами кондиционера Libelove', title: 'Преимущества продукта'}
+  ];
+  const gallerySlides = {
+    conditioner: slides,
+    advantages: [
+      {src: 'assets/image_03.jpg', alt: 'Преимущества кондиционера Libelove: восстановление, гладкость и мягкость', title: 'Преимущества продукта'},
+      {src: 'assets/image_40.jpg', alt: 'Мягкие ПАВы и бережное очищение', title: 'Мягкие ПАВы и бережное очищение'}
+    ],
+    details: [
+      {src: 'assets/image_04.jpg', alt: 'Состав кондиционера: экстракты и масла', title: 'Состав кондиционера: экстракты и масла'},
+      {src: 'assets/image_41.jpg', alt: 'Сравнение волос до и после', title: 'Сравнение волос до и после'},
+      {src: 'assets/image_42.jpg', alt: 'Уход за сухими и непослушными волосами', title: 'Уход за сухими и непослушными волосами'},
+      {src: 'assets/image_43.jpg', alt: 'Кондиционер для разных типов волос', title: 'Кондиционер для разных типов волос'}
+    ],
+      'shampoo-cover': [
+      {src: 'assets/image_05.jpg', alt: 'Шампунь Libelove — слайд 1'},
+      {src: 'assets/image_44.jpg', alt: 'Шампунь Libelove — слайд 2'}
+    ],
+    'shampoo-benefits': [
+      {src: 'assets/image_06.jpg', alt: 'Шампунь Libelove — слайд 1'},
+      {src: 'assets/image_45.jpg', alt: 'Шампунь Libelove — слайд 2'},
+      {src: 'assets/image_46.jpg', alt: 'Шампунь Libelove — слайд 3'}
+    ],
+    'shampoo-details': [
+      {src: 'assets/image_07.jpg', alt: 'Шампунь Libelove — слайд 1'},
+      {src: 'assets/image_47.jpg', alt: 'Шампунь Libelove — слайд 2'}
+    ],
+};
+  let activeSlides = slides;
+  const image = document.getElementById('lightbox-image');
+  const title = document.getElementById('lightbox-title');
+  const count = document.getElementById('lightbox-count');
+  let index = 0;
+  let lastFocus = null;
+  function render() {
+    image.src = activeSlides[index].src;
+    image.alt = activeSlides[index].alt;
+    title.textContent = activeSlides[index].title;
+    count.textContent = String(index + 1).padStart(2, '0') + ' / ' + String(activeSlides.length).padStart(2, '0');
+  }
+  function open(i, galleryName) {
+    lastFocus = document.activeElement;
+    activeSlides = gallerySlides[galleryName] || slides;
+    index = i;
+    render();
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.lightbox-close').focus();
+  }
+  function close() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  function step(delta) {
+    index = (index + delta + activeSlides.length) % activeSlides.length;
+    render();
+  }
+  document.querySelectorAll('.product-preview[data-gallery]').forEach(button => {
+    button.addEventListener('click', () => open(Number(button.dataset.index), button.dataset.gallery));
+  });
+  modal.querySelector('.lightbox-close').addEventListener('click', close);
+  modal.querySelector('.lightbox-prev').addEventListener('click', () => step(-1));
+  modal.querySelector('.lightbox-next').addEventListener('click', () => step(1));
+  modal.addEventListener('click', event => { if (event.target === modal) close(); });
+  document.addEventListener('keydown', event => {
+    if (!modal.classList.contains('is-open')) return;
+    if (event.key === 'Escape') close();
+    if (event.key === 'ArrowLeft') step(-1);
+    if (event.key === 'ArrowRight') step(1);
+  });
+  let startX = null;
+  modal.addEventListener('touchstart', event => { startX = event.changedTouches[0].clientX; }, {passive:true});
+  modal.addEventListener('touchend', event => {
+    if (startX === null) return;
+    const delta = event.changedTouches[0].clientX - startX;
+    if (Math.abs(delta) > 45) step(delta < 0 ? 1 : -1);
+    startX = null;
+  }, {passive:true});
+})();
+</script>
+<script id="visual-carousel-script">
+(() => {
+  document.querySelectorAll('.visual-carousel').forEach(carousel => {
+    const viewport = carousel.querySelector('.visual-carousel-viewport');
+    carousel.querySelectorAll('.visual-carousel-arrow').forEach(button => {
+      button.addEventListener('click', () => {
+        const direction = Number(button.dataset.dir || 1);
+        viewport.scrollBy({ left: direction * Math.max(260, viewport.clientWidth * 0.8), behavior: 'smooth' });
+      });
+    });
+  });
+})();
+</script>
+
+<script id="multi-category-carousel-script">
+document.querySelectorAll('.project-multi-category .visual-carousel').forEach(function(gallery){
+ const viewport=gallery.querySelector('.visual-carousel-viewport');
+ const prev=gallery.querySelector('.visual-carousel-prev');
+ const next=gallery.querySelector('.visual-carousel-next');
+ const step=()=>Math.max(220,Math.round(viewport.clientWidth*0.72));
+ prev.addEventListener('click',()=>viewport.scrollBy({left:-step(),behavior:'smooth'}));
+ next.addEventListener('click',()=>viewport.scrollBy({left:step(),behavior:'smooth'}));
+});
+</script>
+
+
+<script id="mobile-all-photos-viewer">
+(() => {
+  // Make every portfolio photo outside the existing preview cards open in a swipeable viewer.
+  const candidates = [...document.querySelectorAll('main img')].filter(img => {
+    if (img.closest('#gallery-lightbox, #mobile-photo-viewer, .product-preview')) return false;
+    if (!img.currentSrc && !img.getAttribute('src')) return false;
+    return true;
+  });
+  if (!candidates.length) return;
+  const viewer = document.createElement('div');
+  viewer.id = 'mobile-photo-viewer';
+  viewer.setAttribute('role','dialog');
+  viewer.setAttribute('aria-modal','true');
+  viewer.setAttribute('aria-label','Просмотр фотографий портфолио');
+  viewer.innerHTML = '<button type="button" class="mpv-close" aria-label="Закрыть">×</button><button type="button" class="mpv-prev" aria-label="Предыдущее фото">‹</button><img class="mpv-image" alt=""><button type="button" class="mpv-next" aria-label="Следующее фото">›</button><div class="mpv-count" aria-live="polite"></div>';
+  document.body.appendChild(viewer);
+  const big = viewer.querySelector('.mpv-image');
+  const count = viewer.querySelector('.mpv-count');
+  const photos = candidates.map(img => ({src: img.currentSrc || img.src, alt: img.alt || 'Работа из портфолио'}));
+  let index = 0, previousFocus = null, startX = null;
+  function render(){ big.src = photos[index].src; big.alt = photos[index].alt; count.textContent = (index+1)+' / '+photos.length; }
+  function open(i){ index = i; previousFocus = document.activeElement; render(); viewer.classList.add('is-open'); document.body.style.overflow='hidden'; viewer.querySelector('.mpv-close').focus({preventScroll:true}); }
+  function close(){ viewer.classList.remove('is-open'); document.body.style.overflow=''; if(previousFocus && previousFocus.focus) previousFocus.focus({preventScroll:true}); }
+  function step(delta){ index=(index+delta+photos.length)%photos.length; render(); }
+  candidates.forEach((img,i)=>{ img.classList.add('portfolio-tap-view'); img.setAttribute('tabindex','0'); img.setAttribute('role','button'); img.setAttribute('aria-label','Открыть фото: '+(img.alt || 'работа из портфолио')); img.addEventListener('click',()=>open(i)); img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i);}}); });
+  viewer.querySelector('.mpv-close').addEventListener('click',close);
+  viewer.querySelector('.mpv-prev').addEventListener('click',()=>step(-1));
+  viewer.querySelector('.mpv-next').addEventListener('click',()=>step(1));
+  viewer.addEventListener('click',e=>{if(e.target===viewer)close();});
+  document.addEventListener('keydown',e=>{if(!viewer.classList.contains('is-open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1);});
+  viewer.addEventListener('touchstart',e=>{startX=e.changedTouches[0].clientX;},{passive:true});
+  viewer.addEventListener('touchend',e=>{if(startX===null)return;const d=e.changedTouches[0].clientX-startX;if(Math.abs(d)>40)step(d<0?1:-1);startX=null;},{passive:true});
+})();
+</script>
+
+</body></html>
